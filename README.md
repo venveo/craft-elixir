@@ -2,7 +2,7 @@
 
 You can already use Laravel Elixir with Craft. It's rather straight forward. In fact, Matt Stauffer has an [excellent write up on using Elixir on his company blog](http://blog.tighten.co/setting-up-your-first-vuejs-site-using-laravel-elixir-and-vueify?utm_source=github.com/venveo/craft-elixir).
 
-However, when using a CDN such as [CloudFlare](https://www.cloudflare.com/) or [Fastly](https://www.fastly.com/). You might want to take advantage of file versioning to bust the cache. This plugin lets you use Exlixirs built in versioning in your Craft templates!
+However, when using a CDN such as [CloudFlare](https://www.cloudflare.com/) or [Fastly](https://www.fastly.com/). You might want to take advantage of file versioning to bust the cache. This plugin lets you use Elixir's built in versioning in your Craft templates!
 
 ## Requirements
 

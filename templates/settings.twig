@@ -1,0 +1,48 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    first:        true,
+    label:        "Path to Public Directory",
+    id:           'publicPath',
+    name:         'publicPath',
+    instructions: "this is the path to the 'public' directory, only rename this if you have your main index.php in a unique directory."|t,
+    value:        settings.publicPath,
+    autofocus:    true,
+    default:      'public',
+    errors:       settings.getErrors('publicPath')
+}) }}
+
+{{ forms.textField({
+    first:        true,
+    label:        "Path to Build Directory"|t,
+    id:           'buildPath',
+    name:         'buildPath',
+    instructions: "By default, Laravel compiles versioned assets to 'build'. Modify this only if you changed the elixir configuration",
+    value:        settings.buildPath,
+    errors:       settings.getErrors('buildPath')
+}) }}
+
+<hr>
+
+<h3>Template Usage</h3>
+
+<p>Find a versioned CSS asset.</p>
+<code>
+    <pre>
+{{ '<link rel="stylesheet" href="{{ craft.elixir.version(\'css/app.css\') }}">' | e }}
+    </pre>
+</code>
+
+<p>Find a JavaScript versioned asset.</p>
+<code>
+    <pre>
+{{ '<script src="{{ craft.elixir.version(\'js/app.js\') }}"></script>' | e }}
+    </pre>
+</code>
+
+<p>Lazily find a versioned asset and build a default tag. This will output the correct tag based on the file extension.</p>
+<code>
+    <pre>
+{{ '{{ craft.elixir.withTag(\'js/app.js\') | raw }}' | e }}
+    </pre>
+</code>

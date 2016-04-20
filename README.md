@@ -1,6 +1,6 @@
 # Use Laravel Elixir with Craft CMS
 
-You can already use Laravel Elixir with Craft. It's rather straight forward. In fact, Matt Stauffer has an [excellent write up on using Elixir on his company blog](http://blog.tighten.co/setting-up-your-first-vuejs-site-using-laravel-elixir-and-vueify?utm_source=github.com/venveo/craft-elixir).
+![alt tag](https://raw.githubusercontent.com/venveo/craft-elixir/master/resources/icon.png) You can already use Laravel Elixir with Craft. It's rather straight forward. In fact, Matt Stauffer has an [excellent write up on using Elixir on his company blog](http://blog.tighten.co/setting-up-your-first-vuejs-site-using-laravel-elixir-and-vueify?utm_source=github.com/venveo/craft-elixir).
 
 However, when using a CDN such as [CloudFlare](https://www.cloudflare.com/) or [Fastly](https://www.fastly.com/). You might want to take advantage of file versioning to bust the cache. This plugin lets you use Elixir's built in versioning in your Craft templates!
 
@@ -48,11 +48,17 @@ When using the Elixir version function your CSS/JavaScript will output to `publi
 
 With Laravel there is an Elixir PHP helper function that retrieves the correct version. Now you can do this in Craft templates!
 
-`<link rel="stylesheet" href="{{ craft.elixir.version("css/all.css") }}">`
+`<link rel="stylesheet" href="{{ craft.elixir.version('css/all.css') }}">`
 
 and
 
-`<script src="{{ craft.elixir.version("js/app.js") }}"></script>`
+`<script src="{{ craft.elixir.version('js/app.js') }}"></script>`
+
+if you are especially lazy, you can have the plugin automatically create the entire tag, based on the file extension.
+
+`{{ craft.elixir.withTag('js/app.js') | raw }}`
+
+this will output the `<script>` or `<link>` tag.s
 
 ## Credits
 

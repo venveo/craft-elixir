@@ -21,7 +21,17 @@ class ElixirPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '0.9.0';
+        return '1.0.0';
+    }
+
+    /**
+     * Define the schema version.
+     * 
+     * @return string
+     */
+    public function getSchemaVersion()
+    {
+        return '1.0.0';
     }
 
     /**
@@ -42,5 +52,36 @@ class ElixirPlugin extends BasePlugin
     public function getDeveloperUrl()
     {
         return 'https://www.venveo.com';
+    }
+
+    /**
+     * Define the plugins settings.
+     *
+     * @return array
+     */
+    public function defineSettings()
+    {
+        return [
+            'buildPath' => [
+                'type' => AttributeType::String,
+                'default' => 'build'
+            ],
+            'publicPath' => [
+                'type' => AttributeType::String,
+                'default' => 'public'
+            ],
+        ];
+    }
+
+    /**
+     * Get the settings template.
+     *
+     * @return string
+     */
+    public function getSettingsHtml()
+    {
+        return craft()->templates->render('elixir/settings', array(
+            'settings' => $this->getSettings()
+        ));
     }
 }

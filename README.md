@@ -56,8 +56,8 @@ and
 
 ## Credits
 
-[Jason McCallister](https://github.com/themccallister)
-[Carlo Latiano](https://github.com/carlolaitano)
+* [Jason McCallister](https://github.com/themccallister)
+* [Carlo Latiano](https://github.com/carlolaitano)
 
 ## About Venveo
 

@@ -58,7 +58,7 @@ if you are especially lazy, you can have the plugin automatically create the ent
 
 `{{ craft.elixir.withTag('js/app.js') | raw }}`
 
-this will output the `<script>` or `<link>` tag.s
+this will output the `<script>` or `<link>` tags appropriately.
 
 ## Credits
 

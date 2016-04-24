@@ -31,7 +31,7 @@ class ElixirPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     /**
@@ -74,11 +74,13 @@ class ElixirPlugin extends BasePlugin
         return [
             'buildPath' => [
                 'type' => AttributeType::String,
-                'default' => 'build'
+                'default' => 'build',
+                'required' => true
             ],
             'publicPath' => [
                 'type' => AttributeType::String,
-                'default' => 'public'
+                'default' => 'public',
+                'required' => true
             ],
         ];
     }

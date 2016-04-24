@@ -5,16 +5,23 @@ namespace Craft;
 class ElixirService extends BaseApplicationComponent
 {
     /**
-     * @var BaseModel
+     * @var string
      */
-    protected $settings;
+    protected $buildPath;
+
+    /**
+     * @var string
+     */
+    protected $publicPath;
 
     /**
      * ElixirService constructor.
      */
     public function __construct()
     {
-        $this->settings = craft()->plugins->getPlugin('elixir')->getSettings();
+        $settings = craft()->plugins->getPlugin('elixir')->getSettings();
+        $this->buildPath = $settings->buildPath;
+        $this->publicPath = $settings->publicPath;
     }
 
     /**
@@ -32,7 +39,7 @@ class ElixirService extends BaseApplicationComponent
             return $file;
         }
 
-        return $this->settings->buildPath . '/' . $manifest[$file];
+        return $this->buildPath . '/' . $manifest[$file];
     }
 
     /**
@@ -50,17 +57,17 @@ class ElixirService extends BaseApplicationComponent
         // if no manifest, return the regular asset
         if (!$manifest) {
             if ($extension == 'js') {
-                return '<script src="' . $this->settings->buildPath . '/' . $file . '"></script>';
+                return '<script src="' . $this->buildPath . '/' . $file . '"></script>';
             }
 
             return '<link rel="stylesheet" href="' . $file . '">';
         }
 
         if ($extension == 'js') {
-            return '<script src="' . $this->settings->buildPath . '/' . $manifest[$file] . '"></script>';
+            return '<script src="' . $this->buildPath . '/' . $manifest[$file] . '"></script>';
         }
 
-        return '<link rel="stylesheet" href="' . $this->settings->buildPath . '/' . $manifest[$file] . '">';
+        return '<link rel="stylesheet" href="' . $this->buildPath . '/' . $manifest[$file] . '">';
     }
 
     /**
@@ -70,7 +77,7 @@ class ElixirService extends BaseApplicationComponent
      */
     protected function readManifestFile()
     {
-        $manifest = file_get_contents(CRAFT_BASE_PATH . $this->settings->publicPath . '/' . $this->settings->buildPath . '/rev-manifest.json');
+        $manifest = file_get_contents(CRAFT_BASE_PATH . $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json');
 
         return json_decode($manifest, true);
     }

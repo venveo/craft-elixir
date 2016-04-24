@@ -9,7 +9,8 @@
     value:        settings.publicPath,
     autofocus:    true,
     default:      'public',
-    errors:       settings.getErrors('publicPath')
+    errors:       settings.getErrors('publicPath'),
+    required:     true
 }) }}
 
 {{ forms.textField({
@@ -19,7 +20,8 @@
     name:         'buildPath',
     instructions: "By default, Laravel compiles versioned assets to 'build'. Modify this only if you changed the elixir configuration",
     value:        settings.buildPath,
-    errors:       settings.getErrors('buildPath')
+    errors:       settings.getErrors('buildPath'),
+    required:     true
 }) }}
 
 <hr>

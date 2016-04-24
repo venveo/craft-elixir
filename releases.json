@@ -1,0 +1,11 @@
+[
+  {
+    "version": "1.0.0",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/archive/v1.0.0.zip",
+    "date": "2016-20-04 10:00:00",
+    "notes": [
+      "# Initial Release",
+      "[Added] Use Laravel Elixir versioning in Craft templates"
+    ]
+  }
+]

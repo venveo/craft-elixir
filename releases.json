@@ -18,5 +18,14 @@
       "[Added] `buildPath` and `publicPath` are now required",
       "[Improved] Simplified code, just because"
     ]
+  },
+  {
+    "version": "1.0.2",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/archive/v1.0.2.zip",
+    "date": "2016-23-04 10:10:00",
+    "notes": [
+      "# General Improvements",
+      "[Added] Added documentation URL"
+    ]
   }
 ]

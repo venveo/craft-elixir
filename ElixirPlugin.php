@@ -31,7 +31,7 @@ class ElixirPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.1';
+        return '1.0.2';
     }
 
     /**
@@ -52,6 +52,16 @@ class ElixirPlugin extends BasePlugin
     public function getReleaseFeedUrl()
     {
         return 'https://raw.githubusercontent.com/venveo/craft-elixir/master/releases.json';
+    }
+
+    /**
+     * Documentation URL
+     *
+     * @return string
+     */
+    public function getDocumentationUrl()
+    {
+        return 'https://github.com/venveo/craft-elixir';
     }
 
     /**

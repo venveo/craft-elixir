@@ -5,7 +5,7 @@ namespace Craft;
 class ElixirPlugin extends BasePlugin
 {
     /**
-     * Define the plugins name.
+     * Define the plugins name
      *
      * @return string
      */
@@ -15,8 +15,8 @@ class ElixirPlugin extends BasePlugin
     }
 
     /**
-     * Define the plugins description.
-     * 
+     * Define the plugins description
+     *
      * @return string
      */
     public function getDescription()
@@ -25,7 +25,7 @@ class ElixirPlugin extends BasePlugin
     }
 
     /**
-     * Define the plugins version.
+     * Define the plugins version
      *
      * @return string
      */
@@ -35,7 +35,7 @@ class ElixirPlugin extends BasePlugin
     }
 
     /**
-     * Define the schema version.
+     * Define the schema version
      *
      * @return string
      */
@@ -45,7 +45,17 @@ class ElixirPlugin extends BasePlugin
     }
 
     /**
-     * Get the Developer.
+     * URL to releases.json
+     *
+     * @return string
+     */
+    public function getReleaseFeedUrl()
+    {
+        return 'https://raw.githubusercontent.com/venveo/craft-elixir/master/releases.json';
+    }
+
+    /**
+     * Get the Developer
      *
      * @return string
      */

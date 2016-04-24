@@ -7,5 +7,16 @@
       "# Initial Release",
       "[Added] Use Laravel Elixir versioning in Craft templates"
     ]
+  },
+  {
+    "version": "1.0.1",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/archive/v1.0.1.zip",
+    "date": "2016-23-04 10:00:00",
+    "notes": [
+      "# General Improvements",
+      "[Added] Added `releases.json`, closes #2",
+      "[Added] `buildPath` and `publicPath` are now required",
+      "[Improved] Simplified code, just because"
+    ]
   }
 ]

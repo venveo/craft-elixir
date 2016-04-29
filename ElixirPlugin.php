@@ -21,7 +21,7 @@ class ElixirPlugin extends BasePlugin
      */
     public function getDescription()
     {
-        return 'Helper plugin for Laravel Elixir in Craft templates.';
+        return 'Helper plugin for Laravel Elixir in Craft templates';
     }
 
     /**

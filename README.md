@@ -21,8 +21,7 @@ create a `package.json` with the following content:
     "gulp": "^3.9.1"
   },
   "dependencies": {
-    "laravel-elixir": "^5.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "laravel-elixir": "^5.0.0"
   }
 }
 ```

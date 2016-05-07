@@ -36,6 +36,8 @@ add your SCSS, JavaScript and etc just like a Laravel project under `resources/a
 create a `gulpfile.js` with your contents or copy this one:
 
 ```
+var elixir = require('laravel-elixir');
+
 elixir(function(mix) {
     mix.sass('app.scss')
         .version('css/app.css');

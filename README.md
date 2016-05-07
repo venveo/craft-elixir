@@ -43,7 +43,7 @@ elixir(function(mix) {
 });
 ```
 
-Run gulp!
+Run `gulp watch`!
 
 When using the Elixir version function your CSS/JavaScript will output to `public/css/all-16d570a7.css`.  This is where this plugin comes in!
 
@@ -55,11 +55,11 @@ and
 
 `<script src="{{ craft.elixir.version('js/app.js') }}"></script>`
 
-if you are especially lazy, you can have the plugin automatically create the entire tag, based on the file extension.
+If you are especially lazy, you can have the plugin automatically create the entire tag, based on the file extension.
 
 `{{ craft.elixir.withTag('js/app.js') | raw }}`
 
-this will output the `<script>` or `<link>` tags appropriately.
+This will output the `<script>` or `<link>` tags appropriately.
 
 ## Credits
 
@@ -68,8 +68,8 @@ this will output the `<script>` or `<link>` tags appropriately.
 
 ## About Venveo
 
-Venveo is a Digital Marketing Agency for Building Materials Companies in Blacksburg, VA. Learn more about us on our website.
+Venveo is a Digital Marketing Agency for Building Materials Companies in Blacksburg, VA. Learn more about us on [our website](https://www.venveo.com).
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

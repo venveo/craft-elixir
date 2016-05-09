@@ -112,8 +112,8 @@ class ElixirPlugin extends BasePlugin
      */
     public function getSettingsHtml()
     {
-        return craft()->templates->render('elixir/settings', array(
+        return craft()->templates->render('elixir/settings', [
             'settings' => $this->getSettings()
-        ));
+        ]);
     }
 }

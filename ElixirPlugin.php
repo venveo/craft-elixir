@@ -61,7 +61,7 @@ class ElixirPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/venveo/craft-elixir';
+        return 'https://github.com/venveo/craft-elixir/blob/master/README.md';
     }
 
     /**

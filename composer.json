@@ -1,0 +1,14 @@
+{
+    "name": "venveo/craft-elixir",
+    "description": "Use Laravel's Elixir in Craft CMS templates.",
+    "authors": [
+        {
+            "name": "Jason McCallister",
+            "email": "jason@venveo.com"
+            }
+        ],
+    "type": "craft-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

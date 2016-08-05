@@ -77,7 +77,7 @@ class ElixirService extends BaseApplicationComponent
      */
     protected function readManifestFile()
     {
-        $manifest = file_get_contents(CRAFT_BASE_PATH . $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json');
+        $manifest = file_get_contents(CRAFT_BASE_PATH . '../' . $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json');
 
         return json_decode($manifest, true);
     }

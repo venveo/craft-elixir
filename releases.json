@@ -46,5 +46,14 @@
       "[Added] Added the use of twig filters and functions for Elixir.",
       "[Improved] Cleaned up some bugs and general logic."
     ]
+  },
+  {
+    "version": "1.0.5",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/releases/download/v1.0.5/elixir-1.0.5.zip",
+    "date": "2016-10-27 11:00:00",
+    "notes": [
+      "# Bug Fix",
+      "[Fixed] Automagically register the Twig extension to use it, might be a great idea."
+    ]
   }
 ]

@@ -48,7 +48,7 @@
   },
   {
     "version": "1.0.5",
-    "downloadUrl": "https://github.com/venveo/craft-elixir/releases/download/v1.0.5/elixir-1.0.5.zip",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/archive/v.1.0.5.zip",
     "date": "2016-10-27 11:00:00",
     "notes": [
       "[Fixed] Automagically register the Twig extension to use it, might be a great idea."

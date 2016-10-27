@@ -47,7 +47,23 @@ Run `gulp watch`!
 
 When using the Elixir version function your CSS/JavaScript will output to `public/css/all-16d570a7.css`.  This is where this plugin comes in!
 
+## Usage
+
 With Laravel there is an Elixir PHP helper function that retrieves the correct version. Now you can do this in Craft templates!
+
+Twig Function
+
+```
+{{ elixir('css/all.css') }}
+```
+
+> *Note:* you can optionally output the entire HTML tag by passing a second argument `true` to the function (e.g `{{ elixir('css/all.css', true) }}`. 
+
+Twig Filter
+
+```
+{{ 'css/all.css' | elixir }}
+```
 
 `<link rel="stylesheet" href="{{ craft.elixir.version('css/all.css') }}">`
 
@@ -65,6 +81,7 @@ This will output the `<script>` or `<link>` tags appropriately.
 
 * [Jason McCallister](https://github.com/themccallister)
 * [Carlo Latiano](https://github.com/carlolaitano)
+* [Ransom Roberson](https://github.com/mosnar)
 
 ## About Venveo
 

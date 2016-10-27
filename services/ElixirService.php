@@ -13,6 +13,11 @@ class ElixirService extends BaseApplicationComponent
      * @var string
      */
     protected $publicPath;
+    
+    /**
+    * @var string
+    */
+    protected $manifest;
 
     /**
      * ElixirService constructor.
@@ -22,6 +27,7 @@ class ElixirService extends BaseApplicationComponent
         $settings = craft()->plugins->getPlugin('elixir')->getSettings();
         $this->buildPath = $settings->buildPath;
         $this->publicPath = $settings->publicPath;
+        $this->manifest = CRAFT_BASE_PATH . $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json';
     }
 
     /**
@@ -32,14 +38,19 @@ class ElixirService extends BaseApplicationComponent
      */
     public function version($file)
     {
-        $manifest = $this->readManifestFile();
+        try {
+            $manifest = $this->readManifestFile();
+        } catch (\Exception $e) {
+            Craft::log(printf($e->getMessage()), LogLevel::Info, true);
+            return $file;
+        }
 
         // if no manifest, return the regular asset
         if (!$manifest) {
             return $file;
         }
 
-        return $this->buildPath . '/' . $manifest[$file];
+        return '/' . $this->buildPath . '/' . $manifest[$file];
     }
 
     /**
@@ -52,7 +63,12 @@ class ElixirService extends BaseApplicationComponent
     {
         $extension = pathinfo($file, PATHINFO_EXTENSION);
 
-        $manifest = $this->readManifestFile();
+        try {
+            $manifest = $this->readManifestFile();
+        } catch (\Exception $e) {
+            Craft::log(printf($e->getMessage()), LogLevel::Info, true);
+            return $file;
+        }
 
         // if no manifest, return the regular asset
         if (!$manifest) {
@@ -77,8 +93,12 @@ class ElixirService extends BaseApplicationComponent
      */
     protected function readManifestFile()
     {
-        $manifest = file_get_contents(CRAFT_BASE_PATH . '../' . $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json');
-
-        return json_decode($manifest, true);
+        if (file_exists($this->manifest)) {
+            return json_decode(
+                file_get_contents($this->manifest),
+                true
+            );
+        }
+        return false;
     }
 }

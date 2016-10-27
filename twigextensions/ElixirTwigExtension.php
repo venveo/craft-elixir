@@ -25,7 +25,7 @@ class ElixirTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            'elixir' => new \Twig_Filter_Method(
+            'elixir' => new Twig_Filter_Method(
                 $this, 'elixir'
             ),
         ];
@@ -39,7 +39,7 @@ class ElixirTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            'elixir' => new \Twig_Function_Method(
+            'elixir' => new Twig_Function_Method(
                 $this, 'elixir'
             ),
         ];
@@ -49,7 +49,7 @@ class ElixirTwigExtension extends \Twig_Extension
     * Returns versioned asset or the asset with tag.
     * 
     * @param $file
-    * @param boo $tag 
+    * @param bool $tag 
     * @return mixed
     */
     public function elixir($file, $tag = false)

@@ -116,4 +116,14 @@ class ElixirPlugin extends BasePlugin
             'settings' => $this->getSettings()
         ]);
     }
+    
+    /**
+    * Register Twig extension for use.
+    */
+    public function addTwigExtension()
+    {
+        Craft::import('plugins.elixir.twigextensions.ElixirTwigExtension');
+
+        return new ElixirTwigExtension();
+    }
 }

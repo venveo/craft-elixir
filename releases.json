@@ -37,6 +37,7 @@
       "[Improved] Cleaned up what ships with the plugin. Removes unecessary files."
     ]
   },
+  
   {
     "version": "1.0.4",
     "downloadUrl": "https://github.com/venveo/craft-elixir/releases/download/v1.0.4/elixir-1.0.4.zip",
@@ -52,6 +53,14 @@
     "date": "2016-10-27 11:00:00",
     "notes": [
       "[Fixed] Automagically register the Twig extension to use it, might be a great idea."
+    ]
+  },
+  {
+    "version": "1.0.6",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/archive/v1.0.6.zip",
+    "date": "2016-10-28 11:00:00",
+    "notes": [
+      "[Fixed] Versioning with Craft and Github."
     ]
   }
 ]

@@ -27,7 +27,7 @@ class ElixirService extends BaseApplicationComponent
         $settings = craft()->plugins->getPlugin('elixir')->getSettings();
         $this->buildPath = $settings->buildPath;
         $this->publicPath = $settings->publicPath;
-        $this->manifest = CRAFT_BASE_PATH . $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json';
+        $this->manifest = dirname(CRAFT_BASE_PATH) . '/' .  $this->publicPath . '/' . $this->buildPath . '/rev-manifest.json';
     }
 
     /**

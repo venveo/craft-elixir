@@ -62,5 +62,14 @@
     "notes": [
       "[Fixed] Versioning with Craft and Github."
     ]
+  },
+  {
+    "version": "1.0.7",
+    "downloadUrl": "https://github.com/venveo/craft-elixir/archive/v1.0.7.zip",
+    "date": "2016-12-30 11:00:00",
+    "notes": [
+      "[Fixed] Issue with manifest file.",
+      "Happy New Year!"
+    ]
   }
 ]
